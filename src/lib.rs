@@ -126,16 +126,16 @@ fn string_to_transform_mode(
 
 fn string_to_output_format(format_string: &str, quality: u8) -> Option<image::ImageOutputFormat> {
     match format_string {
-        "png" => Some(image::ImageOutputFormat::PNG),
-        "jpg" => Some(image::ImageOutputFormat::JPEG(quality)),
+        "png" => Some(image::ImageOutputFormat::Png),
+        "jpg" => Some(image::ImageOutputFormat::Jpeg(quality)),
         _ => None,
     }
 }
 
 fn output_format_to_key(output_format: image::ImageOutputFormat) -> u8 {
     match output_format {
-        image::ImageOutputFormat::PNG => 0,
-        image::ImageOutputFormat::JPEG(_) => 1,
+        image::ImageOutputFormat::Png => 0,
+        image::ImageOutputFormat::Jpeg(_) => 1,
         _ => unimplemented!(),
     }
 }

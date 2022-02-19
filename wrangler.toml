@@ -1,6 +1,5 @@
-account_id = ""
 name = "image-worker"
 private = false
-route = "/image*"
 type = "rust"
 zone_id = ""
+compatibility_date = "2022-01-15"
